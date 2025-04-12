@@ -33,28 +33,27 @@ For a more detailed guide on using this package see [documentation](https://gaze
 
 ## Assignment
 
-1.
-  a. Launch the simulation. You should see a two-wheeled robot in a maze-type
-  environment. Two windows launch, the Gazebo simulator and RViz, a visualizer for
-  ROS that allows us to see things like past odometry estimates and the current
-  sensor readings.
-  b. Press the arrow-shaped "Play" button in the lower left hand corner of the
-  Gazebo simulator.
-  c. In a new terminal running ROS2, run the command
+1. Launch the simulation. You should see a two-wheeled robot in a maze-type
+   environment. Two windows launch, the Gazebo simulator and RViz, a visualizer for
+   ROS that allows us to see things like past odometry estimates and the current
+   sensor readings.
+   - Press the arrow-shaped "Play" button in the lower left hand corner of the
+   Gazebo simulator.
+   - In a new terminal running ROS2, run the command
 
-  ```bash
-  ros2 topic pub /diff_drive/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 5.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -0.1}}"
-  ```
+   ```bash
+   ros2 topic pub /diff_drive/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 5.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -0.1}}"
+   ```
 
-  d. In another terminal running ROS2, run the command
+   - In another terminal running ROS2, run the command
 
-  ```bash
-  ros2 topic echo /diff_drive/scan
-  ```
+   ```bash
+   ros2 topic echo /diff_drive/scan
+   ```
 
-  What do you notice about the output of the second command as the robot moves
-  around the simulated space? This topic publishes the current distance measured
-  by a single-laser range detector.
+   What do you notice about the output of the second command as the robot moves
+   around the simulated space? This topic publishes the current distance measured
+   by a single-laser range detector.
 
 2. Using publisher and subscriber nodes, implement a wall-following strategy
 that uses the laser scan data to ensure the robot can follow the wall all the
