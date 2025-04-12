@@ -58,7 +58,10 @@ For a more detailed guide on using this package see [documentation](https://gaze
 2. Using publisher and subscriber nodes, implement a wall-following strategy
 that uses the laser scan data to ensure the robot can follow the wall all the
 way around the environment. Submit a screenshot of the RViz screen with the
-odometry path of the robot in your writeup.
+odometry path of the robot in your writeup. The figure below shows a high-level
+strategy for wall-following, to get you started.
+
+![](figs/automata.png)
 
 3. Use CTRL+C to close the simulator and RViz. Open the file `ros_gz_description/models/diff_drive/model.sdf` in a text
 editor. Search for the word "sensor" to find the definition of the laser
