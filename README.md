@@ -102,8 +102,9 @@ of the resulting robot motion.
 
 ## Recommended Reading
 
-* Chapter 2, through section 2.4: Sensing for a Point Robot of *Computational Principles of Mobile Robotics (CPMR)*
+* Chapter 2, through section 2.4: Sensing for a Point Robot of *Computational Principles of Mobile Robotics (CPMR)*.
 * Chapter 3.1 of *CPMR*, specifically the parts on *differential drive* robots.
+* Chapter sections 11.1, 11.2, and 11.6 (for graduate students) of *Planning Algorithms*.
 
 ## Included packages
 
