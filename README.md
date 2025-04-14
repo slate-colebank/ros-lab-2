@@ -36,13 +36,13 @@ For a more detailed guide on using this package see [the Gazebo documentation](h
 1. Launch the simulation. Two windows should launch:  the Gazebo simulation of a differential drive robot
    in a maze and RViz, a ROS program that visualizes topics such as pose and odometry estimates and sensor readings.
    - **Note:** Each time you launch the simulation, to you need to press the arrow-shaped "Play" button in the lower left hand corner of the Gazebo simulator.
-   - In a new terminal running ROS2, run the command
+   - In a new terminal with ROS2 configured, run the command
 
    ```bash
    ros2 topic pub /diff_drive/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 5.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -0.1}}"
    ```
 
-   - In another terminal running ROS2, run the command
+   - In another terminal with ROS2 configured, run the command
 
    ```bash
    ros2 topic echo /diff_drive/scan
