@@ -1,14 +1,3 @@
-## Included packages
-
-* `ros_gz_description` - holds the sdf description of the simulated system and any other assets.
-
-* `ros_gz_gazebo` - holds gazebo specific code and configurations.
-
-* `ros_gz_app` - holds ros2 specific code and configurations.
-
-* `ros_gz_bringup` - holds launch files and high level utilities.
-
-
 ## Usage
 
 1. Build the project
@@ -89,3 +78,18 @@ with respect to both:
 Ideally, include a plot each for a) and b), graphing a metric of the performance of your system
 over time. Screenshots of RViz are OK too, as well as precise technical descriptions
 of the resulting robot motion.
+
+## Recommended Reading
+
+* Chapter 2, through section 2.4: Sensing for a Point Robot of *Computational Principles of Mobile Robotics (CPMR)*
+* Chapter 3.1 of *CPMR*, specifically the parts on *differential drive* robots.
+
+## Included packages
+
+* `ros_gz_description` - holds the sdf description of the simulated system and any other assets.
+
+* `ros_gz_gazebo` - holds gazebo specific code and configurations.
+
+* `ros_gz_app` - holds ros2 specific code and configurations.
+
+* `ros_gz_bringup` - holds launch files and high level utilities.
