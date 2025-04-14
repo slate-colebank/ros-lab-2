@@ -33,8 +33,7 @@ For a more detailed guide on using this package see [the Gazebo documentation](h
 
 ## Assignment
 
-1. Launch the simulation. You should see a two-wheeled robot in a maze-type
-   environment. Two windows launch:  the Gazebo simulation of a differential drive robot
+1. Launch the simulation. Two windows should launch:  the Gazebo simulation of a differential drive robot
    in a maze and RViz, a ROS program that visualizes topics such as pose and odometry estimates and sensor readings.
    - **Note:** Each time you launch the simulation, to you need to press the arrow-shaped "Play" button in the lower left hand corner of the Gazebo simulator.
    - In a new terminal running ROS2, run the command
