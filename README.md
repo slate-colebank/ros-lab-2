@@ -1,12 +1,14 @@
 # WWU CSCI 497F / 597F Lab 2
 
-## Goals: 
+## Goals
 
 1. Become familiar with the basic functionality of ROS2 and Gazebo, an open source 3D physics simulator.
 
 2. Become familiar with sensor modelling and feedback system design.
 
-**Deliverables:** You are expected to upload a typed lab report. Please fork this repository and include a link to your forked version in your lab report. 
+## Deliverables
+
+You are expected to upload a typed lab report. Please fork this repository and include a link to your forked version in your lab report. 
 
 For each numbered item in the lab [assignment](#Assignment), the report should contain: 
 
