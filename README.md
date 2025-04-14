@@ -26,7 +26,7 @@
 1. Launch the simulation
 
     ```bash
-    ros2 launch ros_gz_example_bringup diff_drive.launch.py
+    ros2 launch ros_gz_bringup diff_drive.launch.py
     ```
 
 For a more detailed guide on using this package see [documentation](https://gazebosim.org/docs/latest/ros_gz_project_template_guide).
@@ -66,22 +66,25 @@ strategy for wall-following, to get you started.
 3. Use CTRL+C to close the simulator and RViz. Open the file `ros_gz_description/models/diff_drive/model.sdf` in a text
 editor. Search for the word "sensor" to find the definition of the laser
 scanner.
-  a. In the `<range>` block, change the max range to be 1.0 instead of 100.0 .
-Save the file, rebuild the entire lab2 ROS package, and restart your simulation.
-What is the effect on your wall-following strategy? How can you change your
-strategy to compensate for the reduced sensing range? Revert this change when
-you are done.
-  b. In the `<noise>` block, change the standard deviation of the sensor noise
-(`stddev`) to be 1.0 instead of 0.1. Save, rebuild, and restart your simulation.
-What is the effect on your wall-following strategy? How can you compensate for
-the extremely large noise level? Revert this change when you are done.
-  c. In the `<noise>` block, change the `mean` to be nonzero. What is the effect
-on your wall-following strategy? What happens as the value of the mean gets
-larger?
+
+   - **a.** In the `<range>` block, change the max range to be 1.0 instead of 100.0 .
+      Save the file, rebuild the entire lab2 ROS package, and restart your simulation.
+      What is the effect on your wall-following strategy? How can you change your
+      strategy to compensate for the reduced sensing range? Revert this change when
+      you are done.
+
+   - **b.** In the `<noise>` block, change the standard deviation of the sensor noise
+      (`stddev`) to be 1.0 instead of 0.1. Save, rebuild, and restart your simulation.
+      What is the effect on your wall-following strategy? How can you compensate for
+      the extremely large noise level? Revert this change when you are done.
+   
+   - **c.** In the `<noise>` block, change the `mean` to be nonzero. What is the effect
+      on your wall-following strategy? What happens as the value of the mean gets
+      larger?
 
 
 4. (Graduate Students only) Implement a low-pass filter on your rangefinder data in your
 wall-following code. Analyze the performance of your wall-following strategy
 with respect to both:
-  a. Varying the standard deviation of the rangefinder noise; and
-  b. Varying the baseline speed of the robot.
+   - **a.** Varying the standard deviation of the rangefinder noise; and
+   - **b.** Varying the baseline speed of the robot.
