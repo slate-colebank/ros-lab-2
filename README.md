@@ -67,8 +67,17 @@ that uses the laser scan data to ensure the robot can follow the wall all the
 way around the environment. Submit a screenshot of the RViz window with the
 odometry path of your robot in your writeup. The figure below shows an example of a high-level
 strategy for wall-following. The numbers are arbitrary and you may structure your controller differently.
+For example, you may design a continuous controller instead of discrete.
+
+Notably, our robot lacks a side-facing sensor in the original version. You may choose to turn the robot (while in motion, or in place) 
+to simulate such a measurement, or you may choose to edit the sensor model to allow for a wider "sweep" of the 
+laser rangefinder. You can find our sensor model in [ros_gz_gazebo/worlds/diff_drive.sdf](ros_gz_gazebo/worlds/diff_drive.sdf) (search for "lidar").
+The documentation for the different description fields for the lidar sensor can be found [here](http://sdformat.org/spec?ver=1.12&elem=sensor#sensor_lidar).
 
 ![](figs/automata.png)
+
+For an A grade, your robot only needs to be able to circumnavigate the larger room; you will be graded based upon the level of understanding in your writeup.
+If your robot misses a turn or gets stuck, try to explain why you think it is happening.
 
 3. Use CTRL+C to close the simulator and RViz. Open the file `ros_gz_description/models/diff_drive/model.sdf` in a text
 editor. Search for the word "sensor" to find the definition of the laser
