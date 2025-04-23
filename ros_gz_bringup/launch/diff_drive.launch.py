@@ -34,6 +34,7 @@ def generate_launch_description():
     pkg_project_gazebo = get_package_share_directory('ros_gz_gazebo')
     pkg_project_description = get_package_share_directory('ros_gz_description')
     pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
+    pkg_ros_gz_app = get_package_share_directory('ros_gz_app')
 
     # Load the SDF file from "description" package
     sdf_file  =  os.path.join(pkg_project_description, 'models', 'diff_drive', 'model.sdf')
@@ -82,11 +83,19 @@ def generate_launch_description():
         output='screen'
     )
 
+    robot_publisher = Node(
+        package='ros_gz_app',
+        executable='robot_publisher.py',
+        output='screen'
+    )
+
+
     return LaunchDescription([
         gz_sim,
         DeclareLaunchArgument('rviz', default_value='true',
                               description='Open RViz.'),
         bridge,
         robot_state_publisher,
-        rviz
+        rviz,
+        robot_publisher
     ])

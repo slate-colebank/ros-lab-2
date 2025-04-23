@@ -5,6 +5,7 @@ project(ros_gz_bringup)
 find_package(ament_cmake REQUIRED)
 find_package(ros_gz_description REQUIRED)
 find_package(ros_gz_gazebo REQUIRED)
+find_package(ros_gz_app REQUIRED)
 
 # Install project launch files
 install(
@@ -19,6 +20,7 @@ install(
     config/
   DESTINATION share/${PROJECT_NAME}/config
 )
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
